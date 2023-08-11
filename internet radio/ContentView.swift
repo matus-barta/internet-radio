@@ -9,13 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+            RadiosView().tabItem {
+                Image(systemName: "dot.radiowaves.left.and.right")
+                Text("Radios") }
+            .tag(1)
+            SearchView().tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("Search") }
+            .tag(2)
+            FavoritesView().tabItem {
+                Image(systemName: "heart")
+                Text("Favorites") }
+            .tag(3)
+            SettingsView().tabItem {
+                Image(systemName: "gearshape")
+                Text("Settings") }
+            .tag(4)
         }
-        .padding()
     }
 }
 
