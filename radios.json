@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Radio1",
+    "url": "https://google.com/",
+    "image": "https://picsum.photos/200"
+  },
+  {
+    "name": "Radio2",
+    "url": "https://apple.com/",
+    "image": "https://picsum.photos/200"
+  }
+]
