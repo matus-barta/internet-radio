@@ -7,33 +7,36 @@
 
 import SwiftUI
 
-let radios: [Radio] = APIManager.fetchData().(completion: <#T##(Result<[Radio], Error>) -> Void#>)
 
 struct RadiosView: View {
+    @StateObject var radioModel = RadioModel()
+    
     var body: some View {
-        List(radios) { radio in
-            HStack{
-                Image(radio.image)
-                    .resizable()
-                    .frame(width: 48, height:48)
-                Text(radio.name)
+        NavigationView{
+            List {
+                ForEach(radioModel.radios, id:\.self){ radio in
+                    HStack{
+                        AsyncImage(url: URL(string: radio.image)) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                            .frame(width: 48, height:48)
+                            .background(Color.gray)
+                            .cornerRadius(7)
+                        Text(radio.name)
+                    }
+                }
+            }
+            .navigationTitle("Radios")
+            .onAppear{
+                radioModel.fetch()
             }
         }
     }
 }
 
 struct RadiosView_Previews: PreviewProvider {
-    func fetch() {
-            APIManager.shared.fetchProducts { response in
-                switch response {
-                case .success(let products):
-                    self.products = products
-                case .failue(let error):
-                    print(error)
-                }
-            }
-        }
-    
     static var previews: some View {
         RadiosView()
     }

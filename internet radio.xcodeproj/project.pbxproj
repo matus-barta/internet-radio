@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA1122F02A86E04700F3912E /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1122EF2A86E04700F3912E /* Radio.swift */; };
-		CA1122F22A86E0AB00F3912E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1122F12A86E0AB00F3912E /* APIManager.swift */; };
+		CA1122F72A929FAE00F3912E /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1122F62A929FAE00F3912E /* RadioModel.swift */; };
+		CA1122F92A92B88500F3912E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1122F82A92B88500F3912E /* BlurView.swift */; };
+		CA1122FB2A92B91B00F3912E /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1122FA2A92B91B00F3912E /* MiniPlayerView.swift */; };
 		F2E82E1A2A83C73500349F80 /* internet_radioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E82E192A83C73500349F80 /* internet_radioApp.swift */; };
 		F2E82E1C2A83C73500349F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E82E1B2A83C73500349F80 /* ContentView.swift */; };
 		F2E82E1E2A83C73700349F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E82E1D2A83C73700349F80 /* Assets.xcassets */; };
@@ -20,8 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA1122EF2A86E04700F3912E /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
-		CA1122F12A86E0AB00F3912E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CA1122F62A929FAE00F3912E /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
+		CA1122F82A92B88500F3912E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		CA1122FA2A92B91B00F3912E /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		F2E82E162A83C73500349F80 /* internet radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "internet radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E82E192A83C73500349F80 /* internet_radioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internet_radioApp.swift; sourceTree = "<group>"; };
 		F2E82E1B2A83C73500349F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1122F52A929F9C00F3912E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA1122F62A929FAE00F3912E /* RadioModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F2E82E0D2A83C73500349F80 = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +74,7 @@
 		F2E82E182A83C73500349F80 /* internet radio */ = {
 			isa = PBXGroup;
 			children = (
-				CA1122F12A86E0AB00F3912E /* APIManager.swift */,
-				CA1122EF2A86E04700F3912E /* Radio.swift */,
+				CA1122F52A929F9C00F3912E /* Models */,
 				F2E82E192A83C73500349F80 /* internet_radioApp.swift */,
 				F2E82E1B2A83C73500349F80 /* ContentView.swift */,
 				F2E82E282A862F1100349F80 /* Views */,
@@ -91,6 +100,8 @@
 				F2E82E2B2A862F5200349F80 /* FavoritesView.swift */,
 				F2E82E2D2A862F6000349F80 /* SettingsView.swift */,
 				F2E82E2F2A862FB400349F80 /* SearchView.swift */,
+				CA1122F82A92B88500F3912E /* BlurView.swift */,
+				CA1122FA2A92B91B00F3912E /* MiniPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,13 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1122F22A86E0AB00F3912E /* APIManager.swift in Sources */,
+				CA1122FB2A92B91B00F3912E /* MiniPlayerView.swift in Sources */,
 				F2E82E2E2A862F6000349F80 /* SettingsView.swift in Sources */,
+				CA1122F92A92B88500F3912E /* BlurView.swift in Sources */,
 				F2E82E2C2A862F5200349F80 /* FavoritesView.swift in Sources */,
 				F2E82E2A2A862F4300349F80 /* RadiosView.swift in Sources */,
+				CA1122F72A929FAE00F3912E /* RadioModel.swift in Sources */,
 				F2E82E1C2A83C73500349F80 /* ContentView.swift in Sources */,
 				F2E82E302A862FB400349F80 /* SearchView.swift in Sources */,
-				CA1122F02A86E04700F3912E /* Radio.swift in Sources */,
 				F2E82E1A2A83C73500349F80 /* internet_radioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
